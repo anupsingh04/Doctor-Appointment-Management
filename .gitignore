@@ -1,0 +1,31 @@
+# ## General & Dependencies ##
+# Ignore all node_modules folders, which contain installed packages
+node_modules/
+
+# ## Sensitive Environment Files ##
+# Ignore all .env files containing secrets and environment-specific settings
+# This is CRITICAL for security!
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# ## Production builds ##
+# These are generated automatically and don't need to be in version control
+build/
+dist/
+
+# ## Logs ##
+# Ignore log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# ## IDE & System Files ##
+# Ignore operating system and editor-specific files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
