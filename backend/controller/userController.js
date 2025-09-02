@@ -36,7 +36,7 @@ export const patientRegister = catchAsyncErrors(async (req, res, next) => {
     password,
     role: "Patient",
   });
-  generateToken(user, "User Registered!", 200, res);
+  generateToken(user, "User Registered!", 201, res);
 });
 
 export const login = catchAsyncErrors(async (req, res, next) => {
@@ -61,7 +61,7 @@ export const login = catchAsyncErrors(async (req, res, next) => {
   if (role !== user.role) {
     return next(new ErrorHandler(`User Not Found With This Role!`, 400));
   }
-  generateToken(user, "Login Successfully!", 201, res);
+  generateToken(user, "Login Successfully!", 200, res);
 });
 
 export const addNewAdmin = catchAsyncErrors(async (req, res, next) => {
@@ -96,11 +96,7 @@ export const addNewAdmin = catchAsyncErrors(async (req, res, next) => {
     password,
     role: "Admin",
   });
-  res.status(200).json({
-    success: true,
-    message: "New Admin Registered",
-    admin,
-  });
+  generateToken(admin, "New Admin Registered!", 201, res);
 });
 
 export const addNewDoctor = catchAsyncErrors(async (req, res, next) => {
