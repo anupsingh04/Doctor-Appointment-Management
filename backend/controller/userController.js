@@ -201,6 +201,8 @@ export const logoutAdmin = catchAsyncErrors(async (req, res, next) => {
     .cookie("adminToken", "", {
       httpOnly: true,
       expires: new Date(Date.now()),
+      secure: true, // <-- MUST be true for HTTPS (Render/Vercel)
+      sameSite: "none", // <-- MUST be 'none' for cross-domain cookies
     })
     .json({
       success: true,
@@ -215,6 +217,8 @@ export const logoutPatient = catchAsyncErrors(async (req, res, next) => {
     .cookie("patientToken", "", {
       httpOnly: true,
       expires: new Date(Date.now()),
+      secure: true, // <-- MUST be true for HTTPS (Render/Vercel)
+      sameSite: "none", // <-- MUST be 'none' for cross-domain cookies
     })
     .json({
       success: true,
