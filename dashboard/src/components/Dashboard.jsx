@@ -58,8 +58,9 @@ const Dashboard = () => {
             <img src="/doc.png" alt="docImg" />
             <div className="content">
               <div>
-                <p>Hello ,</p>
-                <h5>{admin && `${admin.firstName} ${admin.lastName}`} </h5>
+                <p>Hello,</p>
+                <h5>{`${admin.firstName} ${admin.lastName}`} </h5>
+                {/* <h5>{admin && `${admin.firstName} ${admin.lastName}`} </h5> */}
               </div>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -70,11 +71,11 @@ const Dashboard = () => {
           </div>
           <div className="secondBox">
             <p>Total Appointments</p>
-            <h3>1500</h3>
+            <h3>{appointments.length}</h3>
           </div>
           <div className="thirdBox">
             <p>Registered Doctors</p>
-            <h3>10</h3>
+            <h3>7</h3>
           </div>
         </div>
         <div className="banner">
