@@ -48,10 +48,6 @@ const Login = () => {
       <div className="container form-component login-form">
         <h2>Sign In</h2>
         <p>Please Login To Continue</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
-        </p>
         <form onSubmit={handleLogin}>
           <input
             type="text"
@@ -84,6 +80,23 @@ const Login = () => {
               style={{ textDecoration: "none", color: "#271776ca" }}
             >
               Register Now
+            </Link>
+          </div>
+          <div
+            style={{
+              gap: "10px",
+              justifyContent: "flex-end",
+              flexDirection: "row",
+            }}
+          >
+            <p style={{ marginBottom: 0 }}>Are you an Admin?</p>
+            <Link
+              to={
+                "https://doctor-appointment-management-dashb.vercel.app/login"
+              }
+              style={{ textDecoration: "none", color: "#271776ca" }}
+            >
+              See Dashboard
             </Link>
           </div>
           <div style={{ justifyContent: "center", alignItems: "center" }}>

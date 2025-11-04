@@ -574,3 +574,7 @@ input[type="time"]:before {
   color: #444;
   margin-right: 0.5em;
 }
+
+button:hover {
+  cursor: pointer;
+}
